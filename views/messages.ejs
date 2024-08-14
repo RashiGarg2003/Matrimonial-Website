@@ -1,0 +1,17 @@
+<%- include ('partials/header') %>
+<h1>Messages</h1>
+<div class="messages-list">
+  <% messages.forEach(message => { %>
+    <div class="message">
+      <p><strong><%= message.sender.equals(currentUser._id) ? 'You' : message.sender.name %>:</strong> <%= message.content %></p>
+    </div>
+  <% }); %>
+</div>
+<form action="/messages" method="POST" class="message-form">
+  <input type="hidden" name="receiverId" value="<%= userId %>">
+  <div class="form-group">
+    <textarea name="content" class="form-control" placeholder="Type your message..." required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Send</button>
+</form>
+<%- include ('partials/footer') %>

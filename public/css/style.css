@@ -1,0 +1,28 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  margin-bottom: 30px;
+}
+
+.jumbotron {
+  background-color: #ffffff;
+  padding: 2rem 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-thumbnail{
+  text-align: center;
+}
+.navbar-brand img {
+  max-width: 100%;
+  height: auto;
+}
+
+#navbar-custom {
+  background-color: yellow !important;
+}
+
+

@@ -1,0 +1,32 @@
+<%- include ('partials/header') %>
+<div class="container">
+  <h1><%= user.name %>'s Profile</h1>
+  <% if (user.profile) { %>
+    <% if (user.profile.profilePic) { %>
+      <img src="/<%= user.profile.profilePic %>" alt="Profile Picture" class="img-thumbnail">
+    <% } %>
+    <p><strong>Bio:</strong> <%= user.profile.bio %></p>
+    <p><strong>Gender:</strong> <%= user.profile.gender %></p>
+    <p><strong>Age:</strong> <%= user.profile.age %></p>
+    <% if (user.profile.dateOfBirth) { %>
+      <p><strong>Date of Birth:</strong> <%= new Date(user.profile.dateOfBirth).toDateString() %></p>
+    <% } else { %>
+      <p><strong>Date of Birth:</strong> Not provided</p>
+    <% } %>
+    <p><strong>Marital Status:</strong> <%= user.profile.maritalStatus %></p>
+    <p><strong>Mother Tongue:</strong> <%= user.profile.motherTongue %></p>
+    <p><strong>Religion:</strong> <%= user.profile.religion %></p>
+    <p><strong>Interests:</strong> <%= user.profile.interests.join(', ') %></p>
+    <p><strong>Height:</strong> <%= user.profile.height %> cm</p>
+    <p><strong>State:</strong> <%= user.profile.State %></p>
+    <p><strong>City:</strong> <%= user.profile.city %></p>
+    <p><strong>Pincode:</strong> <%= user.profile.pincode %></p>
+    <p><strong>Gail Location:</strong> <%= user.profile.Location %></p>
+    <p><strong>Department:</strong> <%= user.profile.department %></p>
+  <% } else { %>
+    <p>No profile found. Please create a profile.</p>
+  <% } %>
+</div>
+
+
+
